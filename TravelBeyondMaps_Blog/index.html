@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Journeys Beyond Maps</title>
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+			integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- NAVBAR -->
+		<header class="navbar">
+			<div class="nav-left">
+				<h1 class="logo">Journeys<span>Beyond</span></h1>
+			</div>
+
+			<nav class="nav-links">
+				<a href="#">Home</a>
+				<a href="#">Destinations</a>
+				<a href="#">Stories</a>
+				<a href="#">Photo Essays</a>
+				<a href="#">About</a>
+			</nav>
+
+			<div class="nav-right">
+				<button class="btn-login">Login</button>
+			</div>
+		</header>
+
+		<!--MAIN -->
+		<section class="main" id="home">
+			<div class="main-overlay">
+				<div class="main-content">
+					<h2>Stories found between destinations</h2>
+					<p>
+						A visual travel journal capturing quiet streets, distant mountains,
+						hidden cafés, and moments that never make it into guidebooks.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- CATEGORIES -->
+		<section class="categories">
+			<ul>
+				<li class="active">Latest</li>
+				<li>Destinations</li>
+				<li>Night Walks</li>
+				<li>Nature</li>
+				<li>Stories</li>
+				<li>Photo Essays</li>
+			</ul>
+		</section>
+
+		<!-- BLOG LIST -->
+		<main class="blog-section" id="blogs">
+			<section class="blog-container">
+				<!-- JS will dynamically insert blog cards here -->
+			</section>
+		</main>
+
+		<!-- FOOTER -->
+		<footer class="footer">
+			<p>&#169; 2026 Journeys Beyond Maps • A visual travel journal</p>
+		</footer>
+
+		<!-- LOGIN MODAL -->
+		<div class="modal-overlay" id="loginModal">
+			<div class="modal">
+				<h2>Login</h2>
+				<input type="text" id="username" placeholder="Username" />
+				<input type="password" id="password" placeholder="Password" />
+				<p class="error" id="loginError"></p>
+				<button id="loginSubmit">Login</button>
+				<span class="close-modal" id="closeLogin">×</span>
+			</div>
+		</div>
+
+		<!-- CREATE BLOG MODAL -->
+		<div class="modal-overlay" id="createBlogModal">
+			<div class="modal">
+				<h2>Create Blog</h2>
+
+				<input id="newTitle" placeholder="Blog title" />
+
+				<select id="newTag">
+					<option>Night Walks</option>
+					<option>Nature</option>
+					<option>Stories</option>
+					<option>Destinations</option>
+					<option>Photo Essays</option>
+				</select>
+
+				<input type="file" id="newImage" accept="image/*" />
+
+				<textarea id="newExcerpt" placeholder="Short description"></textarea>
+
+				<textarea id="newContent" placeholder="Full blog content"></textarea>
+
+				<button id="createBlogSubmit">Publish</button>
+				<span class="close-modal" id="closeCreateBlog">×</span>
+			</div>
+		</div>
+
+		<!-- ABOUT MODAL -->
+		<div class="modal-overlay" id="aboutModal">
+			<div class="modal">
+				<h2>About Journeys Beyond Maps</h2>
+				<p>
+					Journeys Beyond Maps is a visual travel journal capturing quiet
+					streets, distant mountains, hidden cafés, and stories that live
+					between destinations.
+				</p>
+				<span class="close-modal" id="closeAbout">×</span>
+			</div>
+		</div>
+
+		<!-- Toast -->
+		<div id="toast" class="toast"></div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

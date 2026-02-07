@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Journeys Beyond Maps</title>
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+		<header class="navbar">
+			<a href="index.html" class="logo-link">
+				<h1 class="logo">Journeys<span>Beyond</span></h1>
+			</a>
+
+			<a href="index.html" class="back-btn">← Back</a>
+		</header>
+
+		<section class="view-main">
+			<img id="blogImage" src="" alt="Blog image" />
+		</section>
+
+		<main class="view-content">
+			<span id="blogTag" class="tag"></span>
+			<h1 id="blogTitle"></h1>
+			<p id="blogText"></p>
+
+			<div class="blog-actions">
+				<button class="like-btn" id="likeBtn">
+					❤️ <span id="likeCount">0</span>
+				</button>
+				<button class="comment-btn">💬 <span id="commentCount">0</span></button>
+			</div>
+
+			<!-- COMMENTS -->
+			<section class="comments-section">
+				<h3>Comments</h3>
+
+				<form id="commentForm">
+					<input type="text" id="username" placeholder="Your name" required />
+					<textarea
+						id="commentText"
+						placeholder="Write your comment..."
+						required
+					></textarea>
+					<button type="submit">Post Comment</button>
+				</form>
+
+				<div id="commentsList"></div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<p>&#169; 2026 Journeys Beyond Maps</p>
+		</footer>
+
+		<script src="view.js"></script>
+	</body>
+</html>
